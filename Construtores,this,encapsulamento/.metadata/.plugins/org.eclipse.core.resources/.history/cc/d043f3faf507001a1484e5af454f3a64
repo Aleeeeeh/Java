@@ -1,0 +1,24 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class program2 {
+	public static void main(String args[]) {
+
+		Locale.setDefault(Locale.US);
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Digite número da conta: ");
+		int num = sc.nextInt();
+		System.out.print("Digite nome dop Titular: ");
+		sc.nextLine(); // Para consumir essa linha, e a quebra de linha ser correta
+		String nome = sc.nextLine();
+		System.out.print("Deseja Fazer um depósito inicial s/n: ");
+		char resp;
+
+		sc.close();
+	}
+
+}

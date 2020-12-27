@@ -1,0 +1,40 @@
+package application;
+
+
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Alunos;
+
+public class program4 {
+	public static void main(String args[]) {
+		Locale.setDefault(Locale.US);
+		
+		Scanner sc = new Scanner(System.in);
+		
+		Alunos alu = new Alunos();
+		System.out.println("Digite Nome do Aluno: ");
+		
+		alu.nome = sc.nextLine();
+		
+		System.out.println("Digite as notas do Aluno: ");
+		
+		alu.nota1 = sc.nextDouble();
+		alu.nota2 = sc.nextDouble();
+		alu.nota3 = sc.nextDouble();
+		
+		System.out.println("Média do Aluno é: " + alu.Media());
+		
+		if(alu.Media() < 60.0) {
+			System.out.println("Reprovado");
+			System.out.printf("Faltaram %.2f ",alu.cal_media());
+		}else {
+			System.out.printf("Aprovado Com Média: ",alu.Media());
+		}
+		
+		
+	}
+}
+		
+		

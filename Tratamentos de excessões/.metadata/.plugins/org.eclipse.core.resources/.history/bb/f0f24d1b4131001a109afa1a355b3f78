@@ -1,0 +1,44 @@
+package Application;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+import Model.entities.Reservation;
+
+public class Program {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		try {
+			System.out.print("Room Number: ");
+			int number = sc.nextInt();
+			System.out.print("Check-In Date: ");
+			Date checkin = sdf.parse(sc.next());
+			System.out.print("Check-Out Date: ");
+			Date checkout = sdf.parse(sc.next());
+	
+			Reservation reservation = new Reservation(number, checkin, checkout);
+			System.out.println("Reservation: " + reservation);
+	
+			System.out.println();
+			System.out.println("Enter data to update the reservation:");
+			System.out.print("Check-In Date: ");
+			checkin = sdf.parse(sc.next());
+			System.out.print("Check-Out Date: ");
+			checkout = sdf.parse(sc.next());
+	
+			reservation.updateDates(checkin, checkout);
+			
+			System.out.println("Reservation: " + reservation);
+		}
+		catch(ParseException e) {
+			System.out.println("Invalid Date format !");
+		}
+		sc.close();
+		}
+		
+	}
+
+

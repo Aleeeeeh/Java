@@ -1,0 +1,58 @@
+package Application;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.ContratoDeHoras;
+import entities.Trabalhador;
+import entities.departamento;
+import entities.enums.NivelTrabalhador;
+
+public class program {
+	public static void main(String args[]) throws ParseException {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+		System.out.print("Digite o nome do Departamento: ");
+		String nomeDepartamento = sc.nextLine();
+		System.out.print("Digite os dados o Trabalhador: ");
+		System.out.print("Digite o nome do Trabalhador: ");
+		String nomeTrabalhador = sc.nextLine();
+		System.out.print("Nível do trabalhador: ");
+		String nivel = sc.nextLine();
+		System.out.print("Salário base: ");
+		double salBase = sc.nextDouble();
+		Trabalhador trabalhador = new Trabalhador(nomeTrabalhador, NivelTrabalhador.valueOf(nivel), salBase, new departamento(nomeDepartamento));
+		
+		System.out.println("Quantos contratos são desse trabalhador: ");
+		int n = sc.nextInt();
+		//Esse for irá repetir todos dados do trabalhador e contratos
+		for (int i=0; i<n; i++) {
+		System.out.println("Digite os dados do contrato #" + i + ": " );
+		System.out.print("Data do contrato: ");
+		Date dataContrato = sdf.parse(sc.next());
+		System.out.print("Valor por hora: ");
+		double valorHora = sc.nextDouble();
+		System.out.print("Duração de horas: ");
+		int horas = sc.nextInt();
+		ContratoDeHoras conHora = new ContratoDeHoras(dataContrato, valorHora, horas);
+		//Para associar com objeto acima trabalhador
+		trabalhador.adicionarContrato(conHora);
+		
+		}
+		System.out.println("---------------------------");
+		System.out.print("Entre com Mês e Ano para calculo da renda (MM/yyyy: ");
+		String mes_ano = sc.next();
+		int mes = Integer.parseInt(mes_ano.substring(0,2)); //Recorta do 0 a 2
+		int ano = Integer.parseInt(mes_ano.substring(3)); // Recorta da 3 posição em diante
+		
+		
+		
+		
+		sc.close();
+	}
+}

@@ -1,0 +1,71 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entities.enums.NivelTrabalhador;
+
+public class Trabalhador {
+	private String nome;
+	private NivelTrabalhador nivel;
+	private Double salario_base;
+	
+	//Associação com as outras classes segundo o diagrama (Composição de objetos)
+	private departamento Departamento;
+	private List<ContratoDeHoras>contrato = new ArrayList<ContratoDeHoras>();
+	
+	public Trabalhador() {
+		
+	}
+
+	public Trabalhador(String nome, NivelTrabalhador nivel, Double salario_base, departamento departamento) {
+		this.nome = nome;
+		this.nivel = nivel;
+		this.salario_base = salario_base;
+		this.Departamento = departamento;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public NivelTrabalhador getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(NivelTrabalhador nivel) {
+		this.nivel = nivel;
+	}
+
+	public Double getSalario_base() {
+		return salario_base;
+	}
+
+	public void setSalario_base(Double salario_base) {
+		this.salario_base = salario_base;
+	}
+
+	public departamento getDepartamento() {
+		return Departamento;
+	}
+
+	public void setDepartamento(departamento departamento) {
+		Departamento = departamento;
+	}
+
+	public List<ContratoDeHoras> getContrato() {
+		return contrato;
+	}
+	
+	public void adicionarContrato(ContratoDeHoras contratos) {
+		contrato.add(contratos);
+	}
+	public void removerContrato(ContratoDeHoras contratos) {
+		contrato.remove(contratos);
+	}
+	
+}

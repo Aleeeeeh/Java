@@ -1,0 +1,21 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+import util.CurrencyConverter;
+
+
+public class program2 {
+	public static void main(String args[]) {
+		Locale.setDefault(Locale.US);
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("What is the dollar price ? ");
+		double real = sc.nextDouble();
+		double res = CurrencyConverter.valor(real);
+		
+		System.out.printf("Amount to be paid in reais: %.2f%n ",res);
+		
+		sc.close();
+	}
+}

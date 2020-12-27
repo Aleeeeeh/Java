@@ -1,0 +1,20 @@
+package entities;
+
+public class conta {
+	private int num_conta;
+	public String nome;
+	public double deposito;
+	
+	public conta (int conta, String nome) {
+		this.num_conta = conta;
+		this.nome = nome;
+	}
+
+	public conta(int num_conta, String nome, double deposito) {
+		super();
+		this.num_conta = num_conta;
+		this.nome = nome;
+		this.deposito = deposito;
+	}
+	
+}

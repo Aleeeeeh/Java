@@ -1,0 +1,17 @@
+package Entidades;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import Entidade_enums.ordem_status;
+
+public class Pedido {
+	private Date momento;
+	private ordem_status status;
+	
+	private Cliente cliente;
+	
+	private List<item_pedido> item_ped = ArrayList<>();
+
+}

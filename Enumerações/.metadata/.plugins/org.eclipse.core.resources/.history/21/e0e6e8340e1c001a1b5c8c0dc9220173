@@ -1,0 +1,18 @@
+package entities;
+
+import java.util.Date;
+
+public class ContratoDeHoras {
+	private Date data;
+	private Double valor_horas;
+	private Integer horas;
+	
+	public ContratoDeHoras() {
+		
+	}
+	public ContratoDeHoras(Date data, Double valor_horas, Integer horas) {
+		this.data = data;
+		this.valor_horas = valor_horas;
+		this.horas = horas;
+	}
+}

@@ -1,0 +1,8 @@
+package entities;
+
+public class conta {
+	private int num_conta;
+	public String nome;
+	public double deposito;
+
+}

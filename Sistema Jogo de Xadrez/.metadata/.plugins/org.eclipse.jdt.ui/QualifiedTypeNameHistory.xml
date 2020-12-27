@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Boardgame.Piece"/>
+<fullyQualifiedTypeName name="Chess.ClassMatch"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicComboBoxEditor.UIResource"/>
+<fullyQualifiedTypeName name="Chess.pieces.Rook"/>
+<fullyQualifiedTypeName name="Chess.pieces.King"/>
+<fullyQualifiedTypeName name="Boardgame.BoardException"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="Boardgame.Board"/>
+<fullyQualifiedTypeName name="Chess.ChessPosition"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
+<fullyQualifiedTypeName name="Chess.ChessException"/>
+<fullyQualifiedTypeName name="Chess.ChessPiece"/>
+<fullyQualifiedTypeName name="Chess.ChessMatch"/>
+<fullyQualifiedTypeName name="Boardgame.Position"/>
+<fullyQualifiedTypeName name="Chess.Color"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,49 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.conta;
+
+
+public class program2 {
+	public static void main(String args[]) {
+
+		Locale.setDefault(Locale.US);
+
+		Scanner sc = new Scanner(System.in);
+		
+		conta cont; //Variavel de instacia criada fora do IF
+
+		System.out.print("Digite número da conta: ");
+		int num = sc.nextInt();
+		
+		System.out.print("Digite nome do Titular: ");
+		sc.nextLine(); // Para consumir essa linha, e a quebra de linha ser correta
+		String nome = sc.nextLine();
+		
+		System.out.print("Deseja Fazer um depósito inicial s/n: ");
+		char resp = sc.next().charAt(0);
+		
+		if(resp == 's') {
+			System.out.println("Digite valor depósito inicial: ");
+			double depositoInicial = sc.nextDouble(); 
+			
+		cont = new conta(num, nome, depositoInicial);//criar variavel cont fora do if
+		
+		}else { 
+			cont = new conta(num, nome);
+		}
+		
+		System.out.println();
+		System.out.println("Dados da Conta: ");
+		System.out.println(cont);
+		
+		System.out.println("Qual Valor do saque: ");
+		double saq = sc.nextDouble();
+		cont.saque(Amount);
+
+		sc.close();
+	}
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="entities.ordem"/>
+<fullyQualifiedTypeName name="entities.enums.orderStatus"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="entities.enums.NivelTrabalhador"/>
+<fullyQualifiedTypeName name="entities.departamento"/>
+<fullyQualifiedTypeName name="entities.ContratoDeHoras"/>
+<fullyQualifiedTypeName name="entities.Trabalhador"/>
+<fullyQualifiedTypeName name="entities.Comment"/>
+<fullyQualifiedTypeName name="entities.Post"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="Entidades.Cliente"/>
+<fullyQualifiedTypeName name="Entidade_enums.ordem_status"/>
+<fullyQualifiedTypeName name="Entidades.Produto"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="Entidades.Pedido"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="Entidades.item_pedido"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

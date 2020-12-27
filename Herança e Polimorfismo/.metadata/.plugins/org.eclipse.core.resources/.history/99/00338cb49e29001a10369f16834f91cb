@@ -1,0 +1,17 @@
+package Aplicação;
+
+import Entidade.Conta;
+import Entidade.ContaNegocio;
+import Entidade.ContaPoupanca;
+
+public class Programa {
+	public static void main(String args[]) {
+
+		
+		
+		Conta accex = new Conta(1001, "Aleeh", 1000.0);
+		accex.saque(200.0);
+		System.out.println("Saldo disponivel: " + accex);
+	}
+
+}

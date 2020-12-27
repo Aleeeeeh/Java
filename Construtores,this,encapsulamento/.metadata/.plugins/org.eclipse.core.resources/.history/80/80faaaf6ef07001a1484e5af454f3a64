@@ -1,0 +1,46 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.conta;
+
+public class program2 {
+	public static void main(String args []) {
+	
+	Locale.setDefault(Locale.US);
+	
+	Scanner sc = new Scanner (System.in);
+	
+	char resp;
+	
+	do {
+		System.out.print("Número da Conta: ");
+		int conta = sc.nextInt();
+		
+		System.out.print("Nome do titular: ");
+		String nome = sc.next();
+		
+		System.out.println();
+		
+		System.out.print("Deseja realizar um depósito S/N ? ");
+		resp = sc.next().charAt(0);
+		}while (resp != 's');
+	
+		System.out.print("Digite o valor do depósito: ");
+		double dep = sc.nextDouble();
+		
+		conta cont = new conta(conta,nome,deposito);
+		
+		System.out.println(cont);
+		
+		System.out.println();
+		
+	
+	
+	
+	
+	sc.close();
+	}
+
+}

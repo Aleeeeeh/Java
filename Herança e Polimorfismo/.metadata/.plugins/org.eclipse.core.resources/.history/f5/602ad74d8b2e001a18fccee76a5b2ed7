@@ -1,0 +1,28 @@
+package Application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entities.Contribuintes;
+
+public class Program {
+	public static void main(String args[]) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		List<Contribuintes> list = new ArrayList<>();
+		
+		System.out.print("Digite o número de contribuintes: ");
+		int n = sc.nextInt();
+		
+		for(int i=1; i<=n; i++) {
+			System.out.println("Digite os Dados do Contribuintes N°" + i);
+		}
+		
+		
+		sc.close();
+	}
+
+}

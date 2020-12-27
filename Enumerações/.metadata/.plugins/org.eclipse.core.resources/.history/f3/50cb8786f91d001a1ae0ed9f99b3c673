@@ -1,0 +1,56 @@
+package Aplicação;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entidade_enums.ordem_status;
+import Entidades.Cliente;
+import Entidades.Produto;
+import Entidades.item_pedido;
+
+public class Programa {
+	public static void main(String args[]) throws ParseException {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+		System.out.println("Entre com os dados do Cliente ");
+		System.out.print("Nome: ");
+		String nome = sc.nextLine();
+		System.out.print("Email: ");
+		String email = sc.nextLine();
+		System.out.print("Data de Aniversário: ");
+		Date data_ped = sdf.parse(sc.next());
+		Cliente cli = new Cliente(nome, email, data_ped);
+		
+		System.out.print("Digite status do pedido: ");
+		String status = sc.nextLine();
+		ordem_status statuus = ordem_status.valueOf(sc.next());
+		
+		System.out.print("Quanto Itens para esse Pedido ? ");
+		int n = sc.nextInt();
+		for(int i=1; i<=n; i++) {
+			System.out.print("Digite os dados do item #"+ i + ": ");
+			System.out.print("Nome do Produto: ");
+			sc.nextLine();
+			String nome_prod = sc.nextLine();
+			System.out.print("Preço do Produto: ");
+			int preco = sc.nextInt();
+			Produto prod = new Produto(nome_prod, preco);
+			
+			System.out.print("Quantidade: ");
+			int quantidade = sc.nextInt();
+			
+			item_pedido item_ped = new item_pedido(quantidade, preco, prod);
+			
+			
+			
+		}
+		
+	}
+}

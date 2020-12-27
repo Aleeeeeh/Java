@@ -1,0 +1,12 @@
+package Model.exception;
+//RumtimeException não tem necessidade de tratar, exception obriga a tratar as excessoes
+public class DomainException extends Exception {
+
+	private static final long serialVersionUID = 1L;
+	
+	public DomainException(String msg) {
+		super(msg);
+	}
+	
+
+}

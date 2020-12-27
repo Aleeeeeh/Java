@@ -1,0 +1,21 @@
+package Application;
+
+import java.util.Date;
+
+import entities.ordem;
+import entities.enums.orderStatus;
+
+public class program {
+	public static void main (String args []) {
+		
+		ordem order = new ordem(1080, new Date(), orderStatus.AGUARDANDO_PAGAMENTO);
+		System.out.println(order);
+		
+		//Conversão de Enum para String
+		orderStatus os1 = orderStatus.ENTREGUE;
+		orderStatus os2 = orderStatus.valueOf("ENTREGUE");
+		
+		System.out.println(os1);
+		System.out.println(os2);
+	}
+}

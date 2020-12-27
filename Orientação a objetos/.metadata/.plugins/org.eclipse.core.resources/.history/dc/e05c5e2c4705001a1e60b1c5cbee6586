@@ -1,0 +1,11 @@
+package util;
+
+public class CurrencyConverter {
+	
+	public static final double dollar = 3.10;
+	
+	public static double valor_real(double real) {
+		return real * dollar + (real * 6/100);
+	}
+
+}

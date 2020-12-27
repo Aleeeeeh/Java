@@ -1,0 +1,41 @@
+package Application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entities.Contribuintes;
+import Entities.Fisica;
+
+public class Program {
+	public static void main(String args[]) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		List<Contribuintes> list = new ArrayList<>();
+		
+		System.out.print("Digite o número de contribuintes: ");
+		int n = sc.nextInt();
+		
+		for(int i=1; i<=n; i++) {
+			System.out.println("Digite os Dados do Contribuintes N°" + i);
+			System.out.print("Pessoa ou Empresa (P/E) ?");
+			char ch = sc.next().charAt(0);
+			if(ch == 'P') {
+				System.out.print("Nome: ");
+				sc.nextLine();
+				String nome = sc.nextLine();
+				System.out.print("Renda anual: ");
+				double renda = sc.nextDouble();
+				System.out.print("Gastos com saúde: ");
+				double saude = sc.nextDouble();
+				list.add(new Fisica(nome, renda, saude));
+			}
+		}
+		
+		
+		sc.close();
+	}
+
+}
